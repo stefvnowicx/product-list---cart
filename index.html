@@ -4,9 +4,108 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
       <link rel="stylesheet" href="./css/style.css" />
    </head>
-   <body>
-    <p class="text-3xl">sad</p>
+   <body class="flex justify-center items-center bg-rose-100">
+      <main class="w-full min-h-screen flex flex-col justify-center items-center px-4 py-8 space-y-8 max-w-[375px] lg:max-w-[1400px] lg:grid lg:grid-cols-[7fr_3fr] lg:gap-4 lg:justify-items-start">
+         <div class="left-box space-y-8 w-full">
+            <h1 class="text-5xl self-start text-amber-950 font-extrabold">Desserts</h1>
+
+            <div class="desserts-boxes w-full h-full flex flex-col justify-center items-center space-y-8 lg:grid lg:grid-cols-3 lg:grid-rows-3 lg:gap-3">
+               <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
+                  <img src="./img/image-waffle-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
+                  <h2 class="text-gray-500">Waffle</h2>
+                  <p class="text-lg font-semibold">Waffle with Berries</p>
+                  <p class="text-lg font-semibold text-amber-600">$6.50</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                     <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
+                  </button>
+               </div>
+
+               <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
+                  <img src="./img/image-creme-brulee-mobile.jpg" alt="Creme Brulee" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
+                  <h2 class="text-gray-500">Creme Brulee</h2>
+                  <p class="text-lg font-semibold">Vanilla Bean Creme Brulee</p>
+                  <p class="text-lg font-semibold text-amber-600">$7.00</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                     <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
+                  </button>
+               </div>
+               <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
+                  <img src="./img/image-macaron-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
+                  <h2 class="text-gray-500">Macaron</h2>
+                  <p class="text-lg font-semibold">Macaron Mix of Five</p>
+                  <p class="text-lg font-semibold text-amber-600">$8.00</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                     <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
+                  </button>
+               </div>
+               <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
+                  <img src="./img/image-tiramisu-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
+                  <h2 class="text-gray-500">Tiramisu</h2>
+                  <p class="text-lg font-semibold">Classic Tiramisu</p>
+                  <p class="text-lg font-semibold text-amber-600">$5.50</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                     <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
+                  </button>
+               </div>
+               <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
+                  <img src="./img/image-baklava-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
+                  <h2 class="text-gray-500">Baklava</h2>
+                  <p class="text-lg font-semibold">Pistachio Baklava</p>
+                  <p class="text-lg font-semibold text-amber-600">$4.00</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                     <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
+                  </button>
+               </div>
+               <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
+                  <img src="./img/image-meringue-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
+                  <h2 class="text-gray-500">Pie</h2>
+                  <p class="text-lg font-semibold">Lemon Meringue Pie</p>
+                  <p class="text-lg font-semibold text-amber-600">$5.00</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                     <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
+                  </button>
+               </div>
+               <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
+                  <img src="./img/image-cake-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
+                  <h2 class="text-gray-500">Cake</h2>
+                  <p class="text-lg font-semibold">Red Velvet Cake</p>
+                  <p class="text-lg font-semibold text-amber-600">$4.50</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                     <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
+                  </button>
+               </div>
+               <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
+                  <img src="./img/image-brownie-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
+                  <h2 class="text-gray-500">Brownie</h2>
+                  <p class="text-lg font-semibold">Salted Caramel Brownie</p>
+                  <p class="text-lg font-semibold text-amber-600">$5.50</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                     <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
+                  </button>
+               </div>
+
+               <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
+                  <img src="./img/image-panna-cotta-mobile.jpg" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
+                  <h2 class="text-gray-500">Panna Cotta</h2>
+                  <p class="text-lg font-semibold">Vanilla Panna Cotta</p>
+                  <p class="text-lg font-semibold text-amber-600">$6.50</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                     <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
+                  </button>
+               </div>
+            </div>
+         </div>
+
+         <div class="cart relative w-full flex flex-col justify-between items-center space-y-4 bg-rose-50 px-4 py-6 rounded-lg lg:self-start lg:px-8 lg:py-10">
+            <h2 class="text-2xl text-amber-950 font-semibold self-start">Your Cart <span>(0)</span></h2>
+            <img src="./img/illustration-empty-cart.svg" />
+            <p class="text-amber-950 text-center">Your added items will appear here</p>
+         </div>
+      </main>
    </body>
 </html>
