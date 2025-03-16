@@ -61,6 +61,7 @@ const changeBtn = (btn) => {
    const item = {
       name: newBtn.parentElement.querySelector("#item-name").textContent,
       price: newBtn.parentElement.querySelector("#item-price").textContent,
+      src: newBtn.parentElement.querySelector("img").src,
    };
 
    addNewItemToCart(item);
@@ -190,10 +191,13 @@ const addNewItemToCart = (item) => {
                <span id="full-price">${item.price}</span>
            </p>
        </div>
-       <img src="./img/icon-remove-item.svg" class="w-[25px] rounded-[50%] p-1 border-1 border-amber-950" />
+       <img onclick="removeItem(this)" src="./img/icon-remove-item.svg" class="w-[25px] rounded-[50%] p-1 border-1 border-amber-950" />
    `;
 
    newItem.dataset.price = item.price.replace("$", "");
+
+   newItem.dataset.src = item.src;
+
    cartItems.appendChild(newItem);
    calculateTotalCost();
 };
@@ -287,10 +291,10 @@ const handleModalCart = () => {
       };
 
       const modalItem = document.createElement("div");
-      modalItem.classList.add("w-full","flex","justify-between","items-center", "border-b-gray-300","border-b-1","pb-3");
+      modalItem.classList.add("w-full", "flex", "justify-between", "items-center", "border-b-gray-300", "border-b-1", "pb-3");
 
       modalItem.innerHTML = `<div class="flex">
-                     <img src="./img/image-cake-thumbnail.jpg" class="w-15 rounded-lg" />
+                     <img src="${item.dataset.src}" class="w-15 rounded-lg" />
                      <div class="box flex flex-col justify-center items-start pl-2 pr-8">
                         <p class="font-semibold">${itemData.name}</p>
                         <p>
@@ -303,7 +307,7 @@ const handleModalCart = () => {
 
       modalItemsBox.appendChild(modalItem);
    });
-   modalCost.textContent = costText.textContent
+   modalCost.textContent = costText.textContent;
 };
 
 cartBtn.addEventListener("click", showModal);
@@ -312,4 +316,18 @@ modalBtn.addEventListener("click", () => {
    window.location.reload();
 });
 
-// dodawanie zdjeć do modala, naprawa modala gdy jest duzo itemow, strukturyzacja kodu
+const removeItem = (btn) => {
+   const cartItem = btn.closest("#cart-item"); // Znajdź najbliższy element #cart-item
+   if (cartItem) {
+      cartItem.remove(); // Usuń element z koszyka
+      const text = cartItem.querySelector(".box p").textContent;
+      const searchedText = [...document.querySelectorAll("#item-name")].find((btn) => btn.textContent.trim() === text.trim());
+      const btnToChange = searchedText.parentElement.querySelector("button");
+      changeToBasicBtn(btnToChange);
+      cartItemQuantity = cartItemQuantity - parseInt(cartItem.querySelector("#quantity").textContent.replace("x", ""));
+      handleCarts(cartItemQuantity); // Przelicz ilosc przedmiotow w koszyku
+      calculateTotalCost(); // Przelicz koszyk
+   }
+};
+
+// , naprawa modala gdy jest duzo itemow, strukturyzacja kodu
