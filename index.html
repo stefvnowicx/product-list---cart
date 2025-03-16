@@ -12,22 +12,22 @@
    <body class="relative flex justify-center items-center bg-rose-100">
       <main class="w-full min-h-screen flex flex-col justify-center items-center px-4 py-8 space-y-8 max-w-[375px] lg:max-w-[1400px] lg:grid lg:grid-cols-[7fr_3fr] lg:gap-4 lg:justify-items-start">
          <div class="left-box space-y-12 w-full lg:space-y-0">
-            <h1 class="text-5xl self-start text-amber-950 font-extrabold">Desserts</h1>
+            <h1 class="text-5xl self-start text-amber-950 font-extrabold mb-4">Desserts</h1>
 
             <div class="desserts-boxes w-full h-full flex flex-col justify-center items-center space-y-8 lg:grid lg:grid-cols-3 lg:grid-rows-3 lg:gap-3">
                <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
                   <img src="./img/image-waffle-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
                   <h2 class="text-gray-500">Waffle</h2>
-                  <p class="text-lg font-semibold">Waffle with Berries</p>
-                  <p class="text-lg font-semibold text-amber-600">$6.50</p>
+                  <p class="text-lg font-semibold" id="item-name">Waffle with Berries</p>
+                  <p class="text-lg font-semibold text-amber-600" id="item-price">$6.50</p>
 
-                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer" id="add-to-cart">
                      <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
                   </button>
 
                   <!-- <button class="flex justify-center items-center absolute bg-amber-600 left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer text-white space-x-8">
                      <img src="./img/icon-decrement-quantity.svg" class="rounded-[50%] border-1 border-white w-[20px] h-[20px] p-1" id="minus">
-                     <span id="itemQuantity">4</span>
+                     <span id="item-quantity">1</span>
                      <img src="./img/icon-increment-quantity.svg" class="rounded-[50%] border-1 border-white w-[20px] h-[20px] p-1" id="plus">
                   </button> -->
                </div>
@@ -35,63 +35,63 @@
                <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
                   <img src="./img/image-creme-brulee-mobile.jpg" alt="Creme Brulee" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
                   <h2 class="text-gray-500">Creme Brulee</h2>
-                  <p class="text-lg font-semibold">Vanilla Bean Creme Brulee</p>
-                  <p class="text-lg font-semibold text-amber-600">$7.00</p>
-                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                  <p class="text-lg font-semibold" id="item-name" >Vanilla Bean Creme Brulee</p>
+                  <p class="text-lg font-semibold text-amber-600" id="item-price">$7.00</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer" id="add-to-cart">
                      <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
                   </button>
                </div>
                <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
                   <img src="./img/image-macaron-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
                   <h2 class="text-gray-500">Macaron</h2>
-                  <p class="text-lg font-semibold">Macaron Mix of Five</p>
-                  <p class="text-lg font-semibold text-amber-600">$8.00</p>
-                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                  <p class="text-lg font-semibold" id="item-name">Macaron Mix of Five</p>
+                  <p class="text-lg font-semibold text-amber-600" id="item-price">$8.00</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer" id="add-to-cart">
                      <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
                   </button>
                </div>
                <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
                   <img src="./img/image-tiramisu-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
                   <h2 class="text-gray-500">Tiramisu</h2>
-                  <p class="text-lg font-semibold">Classic Tiramisu</p>
-                  <p class="text-lg font-semibold text-amber-600">$5.50</p>
-                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                  <p class="text-lg font-semibold" id="item-name">Classic Tiramisu</p>
+                  <p class="text-lg font-semibold text-amber-600" id="item-price">$5.50</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer" id="add-to-cart">
                      <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
                   </button>
                </div>
                <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
                   <img src="./img/image-baklava-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
                   <h2 class="text-gray-500">Baklava</h2>
-                  <p class="text-lg font-semibold">Pistachio Baklava</p>
-                  <p class="text-lg font-semibold text-amber-600">$4.00</p>
-                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                  <p class="text-lg font-semibold" id="item-name">Pistachio Baklava</p>
+                  <p class="text-lg font-semibold text-amber-600" id="item-price">$4.00</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer" id="add-to-cart">
                      <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
                   </button>
                </div>
                <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
                   <img src="./img/image-meringue-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
                   <h2 class="text-gray-500">Pie</h2>
-                  <p class="text-lg font-semibold">Lemon Meringue Pie</p>
-                  <p class="text-lg font-semibold text-amber-600">$5.00</p>
-                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                  <p class="text-lg font-semibold" id="item-name">Lemon Meringue Pie</p>
+                  <p class="text-lg font-semibold text-amber-600" id="item-price">$5.00</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer" id="add-to-cart">
                      <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
                   </button>
                </div>
                <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
                   <img src="./img/image-cake-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
                   <h2 class="text-gray-500">Cake</h2>
-                  <p class="text-lg font-semibold">Red Velvet Cake</p>
-                  <p class="text-lg font-semibold text-amber-600">$4.50</p>
-                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                  <p class="text-lg font-semibold" id="item-name">Red Velvet Cake</p>
+                  <p class="text-lg font-semibold text-amber-600" id="item-price">$4.50</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer" id="add-to-cart">
                      <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
                   </button>
                </div>
                <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
                   <img src="./img/image-brownie-mobile.jpg" alt="waffle with berries" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
                   <h2 class="text-gray-500">Brownie</h2>
-                  <p class="text-lg font-semibold">Salted Caramel Brownie</p>
-                  <p class="text-lg font-semibold text-amber-600">$5.50</p>
-                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                  <p class="text-lg font-semibold" id="item-name">Salted Caramel Brownie</p>
+                  <p class="text-lg font-semibold text-amber-600" id="item-price">$5.50</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer" id="add-to-cart">
                      <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
                   </button>
                </div>
@@ -99,25 +99,27 @@
                <div class="box relative w-full flex flex-col justify-center items-start self-start *:whitespace-nowrap lg:max-w-[240px] xl:max-w-none">
                   <img src="./img/image-panna-cotta-mobile.jpg" class="w-full object-cover rounded-xl mb-5 lg:mb-10" />
                   <h2 class="text-gray-500">Panna Cotta</h2>
-                  <p class="text-lg font-semibold">Vanilla Panna Cotta</p>
-                  <p class="text-lg font-semibold text-amber-600">$6.50</p>
-                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer">
+                  <p class="text-lg font-semibold" id="item-name">Vanilla Panna Cotta</p>
+                  <p class="text-lg font-semibold text-amber-600" id="item-price">$6.50</p>
+                  <button class="flex justify-center items-center absolute bg-white left-1/2 -translate-x-1/2 bottom-[25%] rounded-3xl px-8 py-3 font-semibold whitespace-nowrap border-1 border-gray-800 lg:bottom-[35%] xl:bottom-[28%] cursor-pointer" id="add-to-cart">
                      <img src="/img/icon-add-to-cart.svg" class="w-[20px] mr-2" />Add to Cart
                   </button>
                </div>
             </div>
          </div>
-<!-- cart -->
-         <!-- <div class="cart relative w-full flex flex-col justify-between items-center space-y-4 bg-rose-50 px-4 py-6 rounded-lg lg:self-start lg:px-8 lg:py-10">
-            <h2 class="text-2xl text-amber-950 font-semibold self-start">Your Cart <span>(0)</span></h2>
+         <!-- cart empty-->
+         <div class="cart hidden relative w-full flex-col justify-between items-center space-y-4 bg-rose-50 px-4 py-6 rounded-lg lg:self-start lg:px-8 lg:py-10"
+         id="empty-cart">
+            <h2 class="text-2xl text-amber-950 font-semibold self-start">Your Cart (0)</h2>
             <img src="./img/illustration-empty-cart.svg" />
             <p class="text-amber-950 text-center">Your added items will appear here</p>
-         </div> -->
-<!-- cart -->
-         <div class="cart relative w-full flex flex-col justify-between items-center space-y-4 bg-rose-50 px-4 py-6 rounded-lg lg:self-start lg:px-8 lg:py-10">
-            <h2 class="text-2xl text-amber-950 font-semibold self-start">Your Cart <span class="all-items">(3)</span></h2>
+         </div>
+         <!-- cart -->
+         <div class="cart relative w-full flex flex-col justify-between items-center space-y-4 bg-rose-50 px-4 py-6 rounded-lg lg:self-start lg:px-8 lg:py-10"
+         id="cart">
+            <h2 class="text-2xl text-amber-950 font-semibold self-start">Your Cart <span class="all-items">(0)</span></h2>
             <div id="cart-items" class="flex flex-col w-full h-full">
-               <div id="cart-item" class="flex justify-between items-center border-b-gray-300 border-b-1 py-3">
+               <!-- <div id="cart-item" class="flex justify-between items-center border-b-gray-300 border-b-1 py-3">
                   <div class="box">
                      <p class="font font-semibold">Classic Tiramisu</p>
                      <p>
@@ -149,7 +151,7 @@
                      </p>
                   </div>
                   <img src="./img/icon-remove-item.svg" class="w-[25px] rounded-[50%] p-1 border-1 border-amber-950" />
-               </div>
+               </div> -->
             </div>
             <div class="flex justify-between w-full items-center">
                <p>Order Total</p>
@@ -162,9 +164,9 @@
             <button id="confirm" class="w-full text-lg text-white bg-amber-700 px-4 py-4 rounded-4xl">Confirm Order</button>
          </div>
       </main>
-<!-- modal -->
-      <!-- <div class="modal-container absolute bg-gray-600/80 w-full h-full">
-         <div id="modal" class="fixed inset-x-0 bottom-0 bg-white px-6 py-8 flex flex-col justify-around items-start space-y-6 rounded-t-3xl min-h-[90vh]
+      <!-- modal -->
+      <div class="hidden absolute bg-gray-600/80 w-full h-full" id="modal" >
+         <div class="fixed inset-x-0 bottom-0 bg-white px-6 py-8 flex flex-col justify-around items-start space-y-6 rounded-t-3xl min-h-[90vh]
          lg:left-1/2 lg:-translate-x-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:min-h-[70vh] lg:max-w-1/3 
          lg:rounded-3xl">
             <img src="./img/icon-order-confirmed.svg" />
@@ -193,8 +195,8 @@
             </div>
             <button class="w-full bg-amber-700 py-4 text-white font-semibold rounded-4xl">Start New Order</button>
          </div>
-      </div> -->
+      </div>
 
-
+      <script src="script.js"></script>
    </body>
 </html>
