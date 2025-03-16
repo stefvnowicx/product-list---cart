@@ -5,10 +5,15 @@ const allItemQuantities = document.getElementById("#item-quantity");
 const emptyCart = document.querySelector("#empty-cart");
 const cart = document.querySelector("#cart");
 const cartBtn = document.querySelector("#confirm");
+const costText = document.querySelector("#total-cost");
 
 const modal = document.querySelector("#modal");
+const modalItemsBox = document.querySelector("#modal-items");
+const modalCost = document.querySelector("#modal-cost");
+const modalBtn = document.querySelector("#modal-btn");
 
 let cartItemQuantity = 0;
+let totalCost = 0;
 
 // zmiana przycisku
 const changeBtn = (btn) => {
@@ -189,8 +194,8 @@ const addNewItemToCart = (item) => {
    `;
 
    newItem.dataset.price = item.price.replace("$", "");
-
    cartItems.appendChild(newItem);
+   calculateTotalCost();
 };
 
 //  funkcja do dodawania kolejnych tych samych produktów
@@ -210,6 +215,9 @@ const increaseItemInCart = (item) => {
 
    itemQ.textContent = `${itemQuantity}x`;
    itemP.textContent = `$${newFullPrice.toFixed(2)}`;
+
+   existingItem.dataset.fullPrice = parseFloat(newFullPrice.toFixed(2));
+   calculateTotalCost();
 };
 
 const decreaseItemInCart = (item) => {
@@ -228,6 +236,9 @@ const decreaseItemInCart = (item) => {
 
    itemQ.textContent = `${itemQuantity}x`;
    itemP.textContent = `$${newFullPrice.toFixed(2)}`;
+
+   existingItem.dataset.fullPrice = parseFloat(newFullPrice.toFixed(2));
+   calculateTotalCost();
 };
 
 const deleteItem = (item) => {
@@ -236,4 +247,69 @@ const deleteItem = (item) => {
    const existingItem = [...items].find((cartItem) => cartItem.querySelector(".box p").textContent.includes(item.name));
 
    cartItems.removeChild(existingItem);
+   calculateTotalCost();
 };
+
+const calculateTotalCost = () => {
+   const cartItems = cart.querySelector("#cart-items");
+   const items = cartItems.querySelectorAll("#cart-item");
+   let allCosts = [];
+
+   items.forEach((item) => {
+      if (item.dataset.fullPrice) {
+         allCosts.push(parseFloat(item.dataset.fullPrice));
+      } else {
+         allCosts.push(parseFloat(item.dataset.price));
+      }
+   });
+
+   totalCost = allCosts.reduce((sum, cost) => sum + cost, 0);
+   totalCost = totalCost.toFixed(2);
+   costText.textContent = `$${totalCost}`;
+};
+
+const showModal = () => {
+   handleModalCart();
+   modal.classList.remove("hidden");
+};
+
+const handleModalCart = () => {
+   const cartItems = document.querySelectorAll("#cart-item");
+   const modalItemsBox = document.querySelector("#modal-items");
+
+   cartItems.forEach((item) => {
+      const itemData = {
+         name: item.querySelector(".box p").textContent,
+         price: parseFloat(item.dataset.price).toFixed(2),
+         fullPrice: item.dataset.fullPrice ? parseFloat(item.dataset.fullPrice).toFixed(2) : parseFloat(item.dataset.price).toFixed(2),
+
+         quantity: item.querySelector("#quantity").textContent,
+      };
+
+      const modalItem = document.createElement("div");
+      modalItem.classList.add("w-full","flex","justify-between","items-center", "border-b-gray-300","border-b-1","pb-3");
+
+      modalItem.innerHTML = `<div class="flex">
+                     <img src="./img/image-cake-thumbnail.jpg" class="w-15 rounded-lg" />
+                     <div class="box flex flex-col justify-center items-start pl-2 pr-8">
+                        <p class="font-semibold">${itemData.name}</p>
+                        <p>
+                           <span class="text-amber-900 font-semibold">${itemData.quantity}</span>
+                           <span class="text-gray-600">@ $${itemData.price}</span>
+                        </p>
+                     </div>
+                  </div>
+                  <p class="font-semibold">$${itemData.fullPrice}</p>`;
+
+      modalItemsBox.appendChild(modalItem);
+   });
+   modalCost.textContent = costText.textContent
+};
+
+cartBtn.addEventListener("click", showModal);
+
+modalBtn.addEventListener("click", () => {
+   window.location.reload();
+});
+
+// dodawanie zdjeć do modala, naprawa modala gdy jest duzo itemow, strukturyzacja kodu
